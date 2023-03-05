@@ -1,0 +1,34 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+form{
+    border-radius: 10px;
+    border-style: dotted;
+    padding: 40px;
+    border-color: aqua;
+    border: 10px;
+    margin: auto 0;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+
+h3, a{
+    color: black;
+}
+.dash{
+    border-top-style: double;
+    background-image: linear-gradient(white,#94aaac);
+    border-radius: 10px;
+}
+footer{
+    background-color: #94aaac;
+    margin-top: auto;
+}
+footer div p{
+    padding: 3%;
+}
+
