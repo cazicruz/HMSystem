@@ -81,14 +81,16 @@ class SignUpForm(FlaskForm):
 # ---------- routing (view functions)
 
 
-@app.route('/<int:id>', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 @login_required
-def home (id):
+def home ():
+    id=session.get('user_id')
     user=db.get_or_404(User, id)
     username=user.username
 
-    patient_no= Roles.query.filter_by(title='Patient').count()
-    return render_template("home.html",patient_no=patient_no,username=username)
+    patient_no= User.query.filter_by(role_id='1').count()
+    no_doctors=User.query.filter_by(role_id='2').count()
+    return render_template("home.html",patient_no=patient_no,no_doctors=no_doctors,username=username)
 
 @app.route('/login', methods=['GET','POST'])
 def login():
@@ -99,7 +101,8 @@ def login():
         if user:
             if bcrypt.check_password_hash(user.password, form.password.data):
                 login_user(user)
-                return redirect(url_for('home', id=user.id))
+                session["user_id"]= user.id
+                return redirect(url_for('home'))
             
         else:
             flash('username or password incorrect')
