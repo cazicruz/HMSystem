@@ -80,17 +80,20 @@ class SignUpForm(FlaskForm):
 
 # ---------- routing (view functions)
 
+@app.route('/')
+def home():
+    return (render_template('home.html'))
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
-def home ():
+def dashboard ():
     id=session.get('user_id')
     user=db.get_or_404(User, id)
     username=user.username
 
     patient_no= User.query.filter_by(role_id='1').count()
-    no_doctors=User.query.filter_by(role_id='2').count()
-    return render_template("home.html",patient_no=patient_no,no_doctors=no_doctors,username=username)
+    no_doctors= User.query.filter_by(role_id='2').count()
+    return render_template("dashboard.html",patient_no=patient_no,no_doctors=no_doctors,username=username)
 
 @app.route('/login', methods=['GET','POST'])
 def login():
@@ -102,7 +105,7 @@ def login():
             if bcrypt.check_password_hash(user.password, form.password.data):
                 login_user(user)
                 session["user_id"]= user.id
-                return redirect(url_for('home'))
+                return redirect(url_for('dashboard'))
             
         else:
             flash('username or password incorrect')
@@ -136,8 +139,9 @@ def sign_up():
         return redirect(url_for('login'))
     return render_template('sign-up.html',form=form)
 
-
-
+def logout():
+    logout_user()
+    return redirect(url_for('login'))
 
  # error handling creating the custom 500 error page
 @app.errorhandler(500)

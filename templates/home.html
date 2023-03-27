@@ -2,41 +2,40 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block title %}Marvel-Clinic{% endblock %}
-
 {% block head%}
 {{ super() }}
-<link rel="stylesheet" href="../static/main.css">
+<link rel="stylesheet" href="../static/style.css">
 {% endblock %}
 
 {% block page_content %}
-
+{{super()}}
 {% for message in get_flashed_messages() %}
- <div class="alert alert-success">
+ <div class="alert alert-warning">
  <button type="button" class="close" data-dismiss="alert">&times;</button>
  {{ message }}
  </div>
  {% endfor %}
- 
-<div class="page-header jumbotron">
-    <h1>Hello, {% if username%}{{username}}{% else %}stranger{% endif %}</h1>
-    <h2>Welcome to the administrative Dashboard</h2>
-</div>
+ <!-- ======= Hero Section ======= -->
+ <section id="hero" class="d-flex align-items-center">
 
-<div class="container">
+  <div class="container">
     <div class="row">
-        <div class="col-md-4 dash">
-            <h2>Number of patients = {{patient_no}}</h2>
+      <div class="col-lg-6 d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
+        <h1>Better Solutions For Your Business</h1>
+        <h2>We are team of talented designers making websites with Bootstrap</h2>
+        <div class="d-flex justify-content-center justify-content-lg-start">
+          <a href="#about" class="btn-get-started scrollto btn">Get Started</a>
+          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video btn"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
         </div>
-        <div class="col-md-4 dash">
-            <h2> Available Doctors = {{no_doctors}}</h2>
-        </div>
-        <div class="col-md-4 dash">
-            <h2> number of Appointments = 0</h2>
-        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+        <img src="static/img/hero-img.png" class="img-fluid animated" alt="">
+      </div>
     </div>
-</div>
+  </div>
+
+</section><!-- End Hero -->
+
+
+
 {% endblock %}
-
-
-
-
