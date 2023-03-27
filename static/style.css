@@ -125,12 +125,10 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
-  height: 100vh;
+  
   background: url("../img/hero-bg.jpg") top center;
   background-color: aqua;
   background-size: cover;
-  display: flex;
   flex-wrap: wrap;
   position:relative;
   padding-top: 0px;
@@ -173,6 +171,7 @@ h6 {
   color: rgba(255, 255, 255, 0.9);
   margin: 10px 0 0 0;
   font-size: 24px;
+  padding-top: 30px;
 }
 
 #hero .icon-box {
@@ -204,8 +203,13 @@ h6 {
   left: -17%;
   right: 0;
   bottom: 11px;
+  padding-top: 2px;
   width: 30px;
   z-index: inherit;
+}
+
+#hero .btn{
+  margin-top:70px
 }
 
 /**@media (min-width: 1024px) {
@@ -230,3 +234,7 @@ h6 {
   }
 }
 */
+#about{
+  display: flex;
+  position: relative;
+}
