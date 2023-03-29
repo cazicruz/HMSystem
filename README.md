@@ -39,11 +39,4 @@ id - IntegerField: A unique identifier for the entry.
 title- ForeignKey: The title of the role 
 
 
-User Stories
-User stories are short descriptions of a feature from an end-user's perspective. They are used to capture user requirements and describe the expected behavior of the system. A well-written user story should be specific, measurable, and testable. One pitfall to avoid when creating user stories is making them too general. User stories should be specific and focused on a particular task or goal. For example, instead of "As a user, I want the app to be easy to use," a more specific user story might be "As a beginner user, I want clear instructions on how to create a new topic."
-
-
-Here are some user stories that could be used for the HM System:
-As a patient i want to be able to book and cancel appointments easily
-As a user, I want to be able to add entries to cancel a period on the clock to make it available to handle emergencies .
 
