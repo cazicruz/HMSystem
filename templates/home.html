@@ -1,11 +1,16 @@
 {% extends "base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
 
 {% block title %}Marvel-Clinic{% endblock %}
 {% block head%}
 {{ super() }}
+<script src="https://kit.fontawesome.com/74758ed6d1.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../static/boxicons/css/boxicons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+
+<!-- main css -->
 <link rel="stylesheet" href="../static/style.css">
-<link rel="stylesheet" href="../static/main.css">
 
 {% endblock %}
 
@@ -18,56 +23,50 @@
  </div>
  {% endfor %}
  <!-- ======= Hero Section ======= -->
- <section id="hero" class="d-flex align-items-center">
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
-        <h1>Better Solutions For Your Business</h1>
-        <h2>We are team of talented designers making<br> websites with Bootstrap</h2>
-        <div class="d-flex justify-content-center justify-content-lg-start">
-          <a href="#about" class="btn-get-started scrollto btn">Get Started</a>
-          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video btn"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-        </div>
-      </div>
-      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-        <img src="static/img/hero-img.png" class="img-fluid animated" alt="">
-      </div>
+ <div  class="heroSection">
+  <div data-aos="fade-up" data-aos-delay="200">
+    <h1>Better Solutions For Your Business</h1>
+    <h2>We are team of talented designers making<br> websites with Bootstrap</h2>
+    <div class="d-flex justify-content-center justify-content-lg-start">
+      <a href="#about" class="btn-get-started scrollto btn">Get Started</a>
+      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video btn"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
     </div>
   </div>
-
-</section><!-- End Hero -->
+  <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+    <img src="static/img/hero-img.png" class="img-fluid animated" alt="">
+  </div>
+</div><!-- End Hero -->
 
 
 <main id="main">
 
   <!-- ======= Clients Section ======= -->
   <section id="clients" class="clients section-bg">
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="row" data-aos="zoom-in">
 
-        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-          <img src="..static/img/clients/client-1.png" class="img-fluid" alt="">
+        <div class="client-img-div">
+          <img src="static/img/clients/client-1.png" class="img-fluid" alt="">
         </div>
 
-        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+        <div class="client-img-div">
           <img src="static/img/clients/client-2.png" class="img-fluid" alt="">
         </div>
 
-        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+        <div class="client-img-div">
           <img src="static/img/clients/client-3.png" class="img-fluid" alt="">
         </div>
 
-        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+        <div class="client-img-div">
           <img src="static/img/clients/client-4.png" class="img-fluid" alt="">
         </div>
 
-        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+        <div class="client-img-div">
           <img src="static/img/clients/client-5.png" class="img-fluid" alt="">
         </div>
 
-        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+        <div class="client-img-div">
           <img src="static/img/clients/client-6.png" class="img-fluid" alt="">
         </div>
 
@@ -91,9 +90,9 @@
             magna aliqua.
           </p>
           <ul>
-            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-            <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+            <li><i class="fa-solid fa-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+            <li><i class="fa-solid fa-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
+            <li><i class="fa-solid fa-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
           </ul>
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0">
@@ -102,7 +101,7 @@
             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <a href="#" class="btn-learn-more">Learn More</a>
+          <a href="#" class="btn-learn-more btn">Learn More</a>
         </div>
       </div>
 
@@ -110,9 +109,189 @@
   </section><!-- End About Us Section -->
 
 
+  <!-- ======= Services Section ======= -->
+  <section id="service">
+    <div class="container">
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum est alias ducimus quas tempore voluptatem vitae molestias voluptate aliquid dolores accusamus possimus voluptates, dolorem voluptatibus asperiores deleniti officiis quia libero!</p>
+      </div>
+      <div class="service-content">
+        <div class="service-card bx-shadow">
+          <div><i class="fa-solid fa-hospital fa-2xl"></i></div>
+          <h3>Lorem ipsum dolor</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Alias ipsam accusamus iusto neque
+            </p>
+        </div>
+        <div class="service-card bx-shadow">
+          <div><i class="fa-solid fa-hospital-user fa-2xl"></i></div>
+          <h3>Lorem ipsum dolor</h3>
+          <p> Lorem ipsum dolor sitelit.
+             Alias ipsam accusamus iusto odio aspernatur voluptatem 
+            </p>
+        </div>
+        <div class="service-card bx-shadow">
+          <div><i class="fa-solid fa-stethoscope fa-2xl"></i></div>
+          <h3>Lorem ipsum dolor</h3>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Alias ipsam.
+            </p>
+        </div>
+        <div class="service-card bx-shadow">
+          <div><i class="fa-solid fa-bed-pulse fa-2xl"></i></div>
+          <h3>Lorem ipsum dolor</h3>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Alias ipsam 
+            </p>
+        </div>      
+      </div>
+    </div>
+  </section>
 
+  <!-- ======= Our team Section ======= -->
+  <section id="team">
+    <div class="container">
+      <div class="team-title">
+        <h2>Our Teams</h2>
+      </div>
+      <div class="team-content">
+        <div class="item card bx-shadow">
+          <div class="img-container">
+            <img src="../static/img/member1.jpg" alt="david">
+          </div>
+          <div class="team-text">
+            <p class="team-name">
+              David Casmir Onwuli
+            </p>
+            <p class="team-title">
+              Fullstack developer
+            </p>
+
+            <div class="team-links">
+              <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-beat fa-lg"></i></a>
+              <a href="https://www.twitter.com"><i class="fa-brands fa-twitter fa-beat fa-lg"></i></a>
+              <a href="https://www.github.com"><i class="fa-brands fa-github fa-beat fa-lg"></i></a>
+              <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin fa-beat fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="item card bx-shadow">
+          <div class="img-container">
+            <img src="../static/img/member1.jpg" alt="david">
+          </div>
+          <div class="team-text">
+            <p class="team-name">
+              David Casmir Onwuli
+            </p>
+            <p class="team-title">
+              Fullstack developer
+            </p>
+            
+            <div class="team-links">
+              <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-beat fa-lg"></i></a>
+              <a href="https://www.twitter.com"><i class="fa-brands fa-twitter fa-beat fa-lg"></i></a>
+              <a href="https://www.github.com"><i class="fa-brands fa-github fa-beat fa-lg"></i></a>
+              <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin fa-beat fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item card bx-shadow">
+          <div class="img-container">
+            <img src="../static/img/member1.jpg" alt="david">
+          </div>
+          <div class="team-text">
+            <p class="team-name">
+              David Casmir Onwuli
+            </p>
+            <p class="team-title">
+              Fullstack developer
+            </p>
+            
+            <div class="team-links">
+              <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-beat fa-lg"></i></a>
+              <a href="https://www.twitter.com"><i class="fa-brands fa-twitter fa-beat fa-lg"></i></a>
+              <a href="https://www.github.com"><i class="fa-brands fa-github fa-beat fa-lg"></i></a>
+              <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin fa-beat fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p> Together they have come to make this project 
+        a reality and thanks to their dedication and passion 
+        for the project the world at large can now see us</p>
+    </div>
+  </section>
+
+  <!-- ======= Testimonials ======= -->
+  
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, in? Laboriosam odio suscipit eligendi sint, laborum aperiam aut! Maxime totam, magnam sit et laudantium reiciendis minus dicta voluptatem similique nulla?</p>
+      </div>
+      <div class="contact-body">
+        <div class="location bx-shadow">
+          <div class="address">
+            <i class="fa-solid fa-map-location-dot fa-xl"></i>
+            <h4>Location:</h4>
+            <p>No 5 worji road port harcourt</p>
+          </div>
+
+          <div class="email">
+            <i class="fa-solid fa-envelope fa-xl"></i>
+            <h4>
+              Email:
+            </h4>
+            <p>dcazicruz@icloud.com</p>
+          </div>
+
+          <div class="phone">
+            <i class="fa-solid fa-phone fa-xl"></i>
+            <h4>
+              Phone:
+            </h4>
+            <p>+2349056668350</p>
+          </div>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33318.32851071668!2d7.026797002758944!3d4.83497967607599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cda04928ec55%3A0x7df6426d31366fe5!2sWorji%2C%20500102%2C%20Rivers!5e0!3m2!1sen!2sng!4v1680936574940!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
+        </div>
+        <div class="form-container bx-shadow">
+          <form action="" method="post">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" class="form-control" id="name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Your Email</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Subject</label>
+              <input type="text" class="form-control" name="subject" id="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Message</label>
+              <textarea class="form-control" name="message" rows="10" required></textarea>
+            </div>
+
+            <div class="text-center"><button class="btn" type="submit">Send Message</button></div>
+          </form>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
 </main>
-
-
 
 {% endblock %}

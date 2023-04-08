@@ -1,11 +1,9 @@
 body{
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
-
 form{
+    font-family: 'Alkatra', cursive;
     border-radius: 10px;
     border-style: dotted;
     padding: 40px;
@@ -24,10 +22,13 @@ h3, a{
     border-radius: 10px;
 }
 footer{
+    
+
     background-color: #94aaac;
     margin-top: auto;
 }
 footer div p{
+    font-family: Alkatra, cursive;
     padding: 3%;
 }
 
